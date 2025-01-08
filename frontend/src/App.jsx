@@ -9,11 +9,7 @@ const App = () => {
     try {
       const result = await fetchTranslation(inputText);
       console.log(result);
-      const translated =
-        result.translatedText ||
-        result.translation ||
-        result.data ||
-        "Translation not found";
+      const translated =result.translation || "Translation not found";
       setTranslatedText(translated);
     } catch (error) {
       console.error("Translation Error:", error);
